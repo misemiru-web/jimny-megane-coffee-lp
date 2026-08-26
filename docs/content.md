@@ -11,6 +11,7 @@
 - Instagram: @jimny_meganecoffee
 - Instagram URL: `https://www.instagram.com/jimny_meganecoffee/`
 - Google Maps URL: `https://www.google.com/maps/place/Jimny+megane+coffee+%E3%82%B8%E3%83%A0%E3%83%8B%E3%83%BC%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC/@34.9220057,138.3604236,17z/data=!3m1!4b1!4m6!3m5!1s0x601a496991fe1693:0x31f4fbc997f79dd9!8m2!3d34.9220057!4d138.3604236!16s%2Fg%2F11xdxdpb27!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D`
+- Google Maps Embed URL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.379820963437!2d138.35784867590206!3d34.92201007130593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a496991fe1693%3A0x31f4fbc997f79dd9!2zSmltbnkgbWVnYW5lIGNvZmZlZSDjgrjjg6Djg4vjg7zjg6Hjgqzjg43jgrPjg7zjg5Ljg7w!5e0!3m2!1sja!2sjp!4v1787787563914!5m2!1sja!2sjp`
 
 ## Hero
 
@@ -106,6 +107,8 @@ Note:
 - Business hours: `固定値を掲載しない`
 - Business hours display: `最新の営業日時はInstagramでご確認ください`
 - Google Maps URL: `https://www.google.com/maps/place/Jimny+megane+coffee+%E3%82%B8%E3%83%A0%E3%83%8B%E3%83%BC%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC/@34.9220057,138.3604236,17z/data=!3m1!4b1!4m6!3m5!1s0x601a496991fe1693:0x31f4fbc997f79dd9!8m2!3d34.9220057!4d138.3604236!16s%2Fg%2F11xdxdpb27!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D`
+- Google Maps Embed URL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.379820963437!2d138.35784867590206!3d34.92201007130593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a496991fe1693%3A0x31f4fbc997f79dd9!2zSmltbnkgbWVnYW5lIGNvZmZlZSDjgrjjg6Djg4vjg7zjg6Hjgqzjg43jgrPjg7zjg5Ljg7w!5e0!3m2!1sja!2sjp!4v1787787563914!5m2!1sja!2sjp`
+- Google Maps embed display: `Accessに公式iframeを小さく表示。Google Maps写真・スクリーンショットは使用しない`
 
 Primary CTA:
 

@@ -6,6 +6,7 @@ LPで使用する画像の管理表です。
 
 - `Status: APPROVED` になった画像のみ `public/images/` に配置する
 - Google Maps写真・スクリーンショットは使用しない
+- AccessではGoogle Maps公式の埋め込みiframeのみ使用可。地図画像のコピー・スクリーンショット代用は禁止
 - ARAS画像・第三者SNS画像は使用しない
 - 公式Instagram内でも転載物・第三者撮影物を自動的に利用可と判断しない
 - Jimny画像が未準備の場合、AI生成・Google Maps・第三者画像で代替しない

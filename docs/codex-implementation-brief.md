@@ -36,7 +36,7 @@ Phase 1の完了を、LP要件定義書における最終Definition of Doneの�
 
 実装判断は次の順序に従います。
 
-1. `docs/Jimny_megane_coffee_LP要件定義書_v1.1_20260826.docx`
+1. `docs/Jimny_megane_coffee_LP要件定義書_v1.2_20260827.docx`
 2. `docs/content.md`
 3. `docs/asset-manifest.md`
 4. このファイル
@@ -327,9 +327,19 @@ APPROVED素材が来た場合だけ後で追加できる構造にします。
 - 静岡県静岡市駿河区用宗5-1-3
 - 最新の営業日時はInstagramでご確認ください
 
-Google Maps iframeは使いません。
+Google Maps公式iframeをAccessに小さく埋め込みます。
 
-Primary CTAは外部Google Mapsリンクです。
+- Desktop：ACCESS見出し側の空白を活用して配置
+- Mobile：ACCESS見出し → 地図 → 店舗情報カード
+- Desktop高さ目安：220〜250px
+- Mobile高さ目安：200〜220px
+- width: 100%
+- border-radius: 12〜16px
+- Google Maps写真・スクリーンショットは禁止
+
+Embed URLは `docs/content.md` の `Google Maps Embed URL` を使用します。
+
+Primary CTAの外部Google Mapsリンクも維持します。
 
 ### Final CTA
 
@@ -556,7 +566,7 @@ APPROVED写真へ差し替えた後に、LP要件定義書のDefinition of Done�
 特に:
 
 - Heroが許可済み公式Instagram由来のドリップ写真
-- Google Maps画像不使用
+- Google Maps写真・スクリーンショット不使用（公式iframe埋め込みは可）
 - Jimnyは条件を満たす場合のみ
 - alt / crop / sizes最終確認
 - CTA一貫性
