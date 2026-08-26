@@ -12,7 +12,7 @@ Jimny megane coffee の営業提案用1ページLPを実装するリポジトリ
 
 仕様判断は必ず次の優先順位に従ってください。
 
-1. `docs/Jimny_megane_coffee_LP要件定義書_v1.1_20260826.docx`
+1. `docs/Jimny_megane_coffee_LP要件定義書_v1.2_20260827.docx`
 2. `docs/content.md`
 3. `docs/asset-manifest.md`
 4. `docs/codex-implementation-brief.md`
@@ -42,7 +42,7 @@ Jimny megane coffee の営業提案用1ページLPを実装するリポジトリ
 
 禁止:
 
-- Google Maps画像・スクリーンショットの利用
+- Google Maps画像・スクリーンショットの利用（ただしAccessのGoogle Maps公式iframe埋め込みは可）
 - Instagram等からの無断ダウンロード・スクレイピング
 - ARAS画像の利用
 - SUZUKI公式画像・ロゴの利用
@@ -109,6 +109,12 @@ Yorimichi用写真が未準備なら、架空画像を作らず、テキスト�
 9. SiteFooter
 
 FAQ、口コミ、Staff、長いStory、News一覧は追加しません。
+
+## Google Maps embed
+
+Accessでは `docs/content.md` に記載されたGoogle Maps公式Embed URLのみiframeで使用できます。
+Google Maps写真・スクリーンショットを地図代わりに使わないでください。
+既存の外部MAP CTAは維持してください。
 
 ## CTA
 

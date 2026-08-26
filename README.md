@@ -36,7 +36,7 @@ jimny-megane-coffee-lp/
 ├─ .gitignore
 │
 ├─ docs/
-│  ├─ Jimny_megane_coffee_LP要件定義書_v1.1_20260826.docx
+│  ├─ Jimny_megane_coffee_LP要件定義書_v1.2_20260827.docx
 │  ├─ content.md
 │  ├─ asset-manifest.md
 │  ├─ codex-implementation-brief.md
@@ -62,7 +62,7 @@ jimny-megane-coffee-lp/
 
 実装判断は以下の順序に従います。
 
-1. `docs/Jimny_megane_coffee_LP要件定義書_v1.1_20260826.docx`
+1. `docs/Jimny_megane_coffee_LP要件定義書_v1.2_20260827.docx`
 2. `docs/content.md`
 3. `docs/asset-manifest.md`
 4. `docs/codex-implementation-brief.md`
@@ -146,6 +146,8 @@ URLは `docs/content.md` を唯一の実装基準とします。
 
 Secondary CTAは公式Instagramです。
 
+Accessには `docs/content.md` のEmbed URLを使ったGoogle Maps公式iframeを小さく表示します。Google Maps写真・スクリーンショットは使用しません。外部MAP CTAも維持します。
+
 Mobileのsticky CTAはMAPの1ボタンだけです。
 
 ---
@@ -154,7 +156,7 @@ Mobileのsticky CTAはMAPの1ボタンだけです。
 
 以下が揃っていることを確認します。
 
-- LP要件定義書 v1.1
+- LP要件定義書 v1.2
 - content.md
 - asset-manifest.md
 - codex-implementation-brief.md
