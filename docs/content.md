@@ -10,7 +10,7 @@
 - Address: 静岡県静岡市駿河区用宗5-1-3
 - Instagram: @jimny_meganecoffee
 - Instagram URL: `https://www.instagram.com/jimny_meganecoffee/`
-- Google Maps URL: `TODO: 店舗の正式な共有URLを設定`
+- Google Maps URL: `https://www.google.com/maps/place/Jimny+megane+coffee+%E3%82%B8%E3%83%A0%E3%83%8B%E3%83%BC%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC/@34.9220057,138.3604236,17z/data=!3m1!4b1!4m6!3m5!1s0x601a496991fe1693:0x31f4fbc997f79dd9!8m2!3d34.9220057!4d138.3604236!16s%2Fg%2F11xdxdpb27!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D`
 
 ## Hero
 
@@ -105,6 +105,7 @@ Note:
 - Address: 静岡県静岡市駿河区用宗5-1-3
 - Business hours: `固定値を掲載しない`
 - Business hours display: `最新の営業日時はInstagramでご確認ください`
+- Google Maps URL: `https://www.google.com/maps/place/Jimny+megane+coffee+%E3%82%B8%E3%83%A0%E3%83%8B%E3%83%BC%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC/@34.9220057,138.3604236,17z/data=!3m1!4b1!4m6!3m5!1s0x601a496991fe1693:0x31f4fbc997f79dd9!8m2!3d34.9220057!4d138.3604236!16s%2Fg%2F11xdxdpb27!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D`
 
 Primary CTA:
 
