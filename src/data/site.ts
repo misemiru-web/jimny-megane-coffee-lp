@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/asset-path";
+
 export const site = {
   sampleMode: true,
   name: "Jimny megane coffee",
@@ -28,9 +30,9 @@ export const site = {
       detour: "よりみちを。",
     },
     body: "南部鉄器で淹れるドリップ珈琲。食事やお酒も楽しめる、用宗の小さな coffee stand & bar。",
-    image: "/images/hero/hero-drip-new.png",
+    image: assetPath("/images/hero/hero-drip-new.png"),
     imageAlt: "南部鉄器で淹れるドリップ珈琲の写真差し替え予定領域",
-    illustration: "/images/hero/jimny-illustration-full.png",
+    illustration: assetPath("/images/hero/jimny-illustration-full.png"),
   },
   about: {
     heading: "用宗にある、小さな coffee stand & bar。",
@@ -39,11 +41,11 @@ export const site = {
     body: "朝の一杯も、昼のひと息も、お酒を片手に過ごす時間も。コーヒーや食事、用宗での“よりみち”を一つの場所で感じられる店舗として紹介します。",
     images: [
       {
-        src: "/placeholders/exterior.svg",
+        src: assetPath("/placeholders/exterior.svg"),
         alt: "Jimny megane coffeeの外観写真差し替え予定領域",
       },
       {
-        src: "/placeholders/interior.svg",
+        src: assetPath("/placeholders/interior.svg"),
         alt: "Jimny megane coffeeの店内写真差し替え予定領域",
       },
     ],
@@ -57,19 +59,19 @@ export const site = {
     {
       category: "Coffee",
       item: "南部鉄器で淹れるドリップ珈琲",
-      image: "/placeholders/coffee.svg",
+      image: assetPath("/placeholders/coffee.svg"),
       alt: "ドリップ珈琲の写真差し替え予定領域",
     },
     {
       category: "Food",
       item: "おむすび等",
-      image: "/placeholders/food.svg",
+      image: assetPath("/placeholders/food.svg"),
       alt: "Foodの写真差し替え予定領域",
     },
     {
       category: "Bar",
       item: "ビール",
-      image: "/placeholders/interior.svg",
+      image: assetPath("/placeholders/interior.svg"),
       alt: "Barの雰囲気が伝わる写真差し替え予定領域",
     },
   ],
@@ -83,22 +85,22 @@ export const site = {
   },
   gallery: [
     {
-      src: "/placeholders/exterior.svg",
+      src: assetPath("/placeholders/exterior.svg"),
       alt: "店舗外観の写真差し替え予定領域",
       label: "Exterior",
     },
     {
-      src: "/placeholders/interior.svg",
+      src: assetPath("/placeholders/interior.svg"),
       alt: "店内の写真差し替え予定領域",
       label: "Interior",
     },
     {
-      src: "/placeholders/coffee.svg",
+      src: assetPath("/placeholders/coffee.svg"),
       alt: "コーヒーの写真差し替え予定領域",
       label: "Coffee",
     },
     {
-      src: "/placeholders/food.svg",
+      src: assetPath("/placeholders/food.svg"),
       alt: "Foodの写真差し替え予定領域",
       label: "Food",
     },

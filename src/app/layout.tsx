@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { assetPath } from "@/lib/asset-path";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,12 +14,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/branding/jimny-megane-coffee-icon-symbol.png",
+        url: assetPath("/branding/jimny-megane-coffee-icon-symbol.png"),
         type: "image/png",
       },
     ],
-    shortcut: "/branding/jimny-megane-coffee-icon-symbol.png",
-    apple: "/branding/jimny-megane-coffee-icon-symbol.png",
+    shortcut: assetPath("/branding/jimny-megane-coffee-icon-symbol.png"),
+    apple: assetPath("/branding/jimny-megane-coffee-icon-symbol.png"),
   },
 };
 

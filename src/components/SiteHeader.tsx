@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
+import { assetPath } from "@/lib/asset-path";
 import { CloseIcon, MapPinIcon, MenuIcon } from "./Icons";
 
 export function SiteHeader() {
@@ -34,7 +35,7 @@ export function SiteHeader() {
           aria-label={`${site.name}｜ページ上部へ`}
         >
           <Image
-            src="/branding/jimny-megane-coffee-header-logo.png"
+            src={assetPath("/branding/jimny-megane-coffee-header-logo.png")}
             alt={site.name}
             width={2172}
             height={724}

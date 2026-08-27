@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { site } from "@/data/site";
+import { assetPath } from "@/lib/asset-path";
 import { InstagramIcon } from "./Icons";
 
 export function SiteFooter() {
@@ -10,7 +11,7 @@ export function SiteFooter() {
           <div className="site-footer__logo-frame">
             <Image
               className="site-footer__logo"
-              src="/branding/jimny-megane-coffee-footer-logo.png"
+              src={assetPath("/branding/jimny-megane-coffee-footer-logo.png")}
               alt={site.name}
               width={2172}
               height={724}
