@@ -8,6 +8,8 @@ export const site = {
     instagram: "https://www.instagram.com/jimny_meganecoffee/",
     googleMaps:
       "https://www.google.com/maps/place/Jimny+megane+coffee+%E3%82%B8%E3%83%A0%E3%83%8B%E3%83%BC%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC/@34.9220057,138.3604236,17z/data=!3m1!4b1!4m6!3m5!1s0x601a496991fe1693:0x31f4fbc997f79dd9!8m2!3d34.9220057!4d138.3604236!16s%2Fg%2F11xdxdpb27!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D",
+    googleMapsEmbed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.379820963437!2d138.35784867590206!3d34.92201007130593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a496991fe1693%3A0x31f4fbc997f79dd9!2zSmltbnkgbWVnYW5lIGNvZmZlZSDjgrjjg6Djg4vjg7zjg6Hjgqzjg43jgrPjg7zjg5Ljg7w!5e0!3m2!1sja!2sjp!4v1787787563914!5m2!1sja!2sjp",
   },
   navigation: [
     { label: "About", href: "#about" },
@@ -19,12 +21,19 @@ export const site = {
   hero: {
     eyebrow: "MOCHIMUNE / SHIZUOKA ・ COFFEE STAND & BAR",
     heading: "用宗で、コーヒーと、よりみちを。",
+    headingParts: {
+      place: "用宗で、",
+      coffee: "コーヒーと、",
+      detour: "よりみちを。",
+    },
     body: "南部鉄器で淹れるドリップ珈琲。食事やお酒も楽しめる、用宗の小さな coffee stand & bar。",
     image: "/placeholders/hero-drip.svg",
     imageAlt: "南部鉄器で淹れるドリップ珈琲の写真差し替え予定領域",
   },
   about: {
     heading: "用宗にある、小さな coffee stand & bar。",
+    headingParts: ["用宗にある、小さな", "coffee stand", "& bar。"],
+    mobileHeadingParts: ["用宗にある、", "小さな coffee stand & bar。"],
     body: "朝の一杯も、昼のひと息も、お酒を片手に過ごす時間も。コーヒーや食事、用宗での“よりみち”を一つの場所で感じられる店舗として紹介します。",
     images: [
       {
@@ -64,6 +73,8 @@ export const site = {
   ],
   yorimichi: {
     heading: "用宗の朝も、昼も。よりみちのきっかけを。",
+    headingParts: ["用宗の朝も、昼も。", "よりみちの", "きっかけを。"],
+    mobileHeadingParts: ["用宗の朝も、昼も。", "よりみちのきっかけを。"],
     label: "過去の企画例",
     examples: ["朝のよりみち in 用宗", "昼のよりみち", "Coffee Blues"],
     note: "開催内容は時期により変わります。最新情報はInstagramをご確認ください。",
@@ -91,6 +102,10 @@ export const site = {
     },
   ],
   latestInfoNote: "最新の営業日時はInstagramでご確認ください。",
+  finalCta: {
+    heading: "今日のよりみちを、用宗で。",
+    headingParts: ["今日のよりみちを、", "用宗で。"],
+  },
   sampleNote: "掲載内容は正式制作時に店舗確認のうえ更新します。",
 } as const;
 

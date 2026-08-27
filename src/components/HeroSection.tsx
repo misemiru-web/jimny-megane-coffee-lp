@@ -9,7 +9,17 @@ export function HeroSection() {
       <div className="hero__content">
         <div className="hero__copy">
           <p className="eyebrow">{site.hero.eyebrow}</p>
-          <h1 id="hero-heading">{site.hero.heading}</h1>
+          <h1 id="hero-heading" aria-label={site.hero.heading}>
+            <span className="hero-heading__phrase hero-heading__phrase--place">
+              {site.hero.headingParts.place}
+            </span>
+            <span className="hero-heading__phrase hero-heading__phrase--coffee">
+              {site.hero.headingParts.coffee}
+            </span>
+            <span className="hero-heading__phrase hero-heading__phrase--detour">
+              {site.hero.headingParts.detour}
+            </span>
+          </h1>
           <p className="hero__body">{site.hero.body}</p>
           <div className="button-group hero__buttons">
             <CtaLink href={site.urls.googleMaps} icon={<MapPinIcon />}>
@@ -23,10 +33,6 @@ export function HeroSection() {
               {ctaLabels.instagram}
             </CtaLink>
           </div>
-          <div className="hero__meta">
-            <p>{site.address}</p>
-            <p>{site.latestInfoNote}</p>
-          </div>
         </div>
       </div>
 
@@ -39,6 +45,11 @@ export function HeroSection() {
           sizes="(max-width: 767px) 100vw, 58vw"
         />
         <span className="placeholder-label">PHOTO PLACEHOLDER</span>
+      </div>
+
+      <div className="hero__meta">
+        <p>{site.address}</p>
+        <p>{site.latestInfoNote}</p>
       </div>
     </section>
   );

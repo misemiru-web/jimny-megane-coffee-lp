@@ -26,7 +26,25 @@ export function AboutHighlightsSection() {
 
         <div className="about__copy">
           <p className="section-kicker">ABOUT US</p>
-          <h2 id="about-heading">{site.about.heading}</h2>
+          <h2 id="about-heading" aria-label={site.about.heading}>
+            <span className="about-heading__mobile" aria-hidden="true">
+              <span className="heading-line">
+                {site.about.mobileHeadingParts[0]}
+              </span>
+              <span className="heading-line text-nowrap">
+                {site.about.mobileHeadingParts[1]}
+              </span>
+            </span>
+            <span className="about-heading__desktop" aria-hidden="true">
+              <span className="heading-line">{site.about.headingParts[0]}</span>
+              <span className="heading-line">
+                <span className="text-nowrap">{site.about.headingParts[1]}</span>
+                <span className="about-heading__bar text-nowrap">
+                  {site.about.headingParts[2]}
+                </span>
+              </span>
+            </span>
+          </h2>
           <p>{site.about.body}</p>
 
           <ol className="highlights" aria-label="店舗の3つの特徴">

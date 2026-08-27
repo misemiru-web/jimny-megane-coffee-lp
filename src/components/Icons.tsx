@@ -19,14 +19,6 @@ export function InstagramIcon({ className }: IconProps) {
   );
 }
 
-export function ArrowIcon({ className }: IconProps) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 12h13M13 7l5 5-5 5" />
-    </svg>
-  );
-}
-
 export function MenuIcon({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" aria-hidden="true">

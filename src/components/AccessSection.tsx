@@ -9,6 +9,15 @@ export function AccessSection() {
         <div className="access__heading">
           <p className="section-kicker">COME BY AND SAY HELLO</p>
           <h2 id="access-heading">ACCESS</h2>
+          <div className="access__map">
+            <iframe
+              src={site.urls.googleMapsEmbed}
+              title="Jimny megane coffee周辺のGoogleマップ"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
         </div>
 
         <div className="access__details">

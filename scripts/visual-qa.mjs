@@ -207,6 +207,22 @@ for (const viewport of dimensions) {
       const sticky = document.querySelector('.mobile-sticky-cta');
       const footer = document.querySelector('#site-footer');
       const links = [...document.querySelectorAll('a')];
+      const header = document.querySelector('.site-header');
+      const heroVisual = document.querySelector('.hero__visual');
+      const heroMeta = document.querySelector('.hero__meta');
+      const heroPhrases = [...document.querySelectorAll('.hero-heading__phrase')];
+      const galleryItems = [...document.querySelectorAll('.gallery-item')];
+      const buttons = [...document.querySelectorAll('.button')];
+      const rect = (node) => node ? {
+        x: node.getBoundingClientRect().x,
+        y: node.getBoundingClientRect().y,
+        top: node.getBoundingClientRect().top,
+        right: node.getBoundingClientRect().right,
+        bottom: node.getBoundingClientRect().bottom,
+        left: node.getBoundingClientRect().left,
+        width: node.getBoundingClientRect().width,
+        height: node.getBoundingClientRect().height,
+      } : null;
       return {
         title: document.title,
         h1Count: document.querySelectorAll('h1').length,
@@ -217,7 +233,16 @@ for (const viewport of dimensions) {
         documentHeight: document.documentElement.scrollHeight,
         heroPrimaryBottom: primary?.getBoundingClientRect().bottom ?? null,
         heroPrimaryWithin1_3Viewport: primary ? primary.getBoundingClientRect().bottom <= innerHeight * 1.3 : false,
+        heroHeadingOverflow: document.querySelector('#hero-heading')?.scrollWidth > document.querySelector('#hero-heading')?.clientWidth,
+        heroPhraseRects: heroPhrases.map((item) => ({ text: item.textContent, ...rect(item) })),
+        heroVisualRect: rect(heroVisual),
+        heroMetaRect: rect(heroMeta),
+        mobileHeroOrderCorrect: innerWidth >= 768 || (primary && heroVisual && heroMeta
+          ? primary.getBoundingClientRect().bottom <= heroVisual.getBoundingClientRect().top && heroVisual.getBoundingClientRect().bottom <= heroMeta.getBoundingClientRect().top
+          : false),
+        headerBackground: header ? getComputedStyle(header).backgroundColor : null,
         stickyDisplay: sticky ? getComputedStyle(sticky).display : null,
+        stickyHeight: sticky ? sticky.getBoundingClientRect().height : null,
         footerExists: Boolean(footer),
         sectionIds: [...document.querySelectorAll('main section[id]')].map((item) => item.id),
         mapLinkCount: links.filter((link) => link.href.startsWith('https://www.google.com/maps/place/')).length,
@@ -228,9 +253,47 @@ for (const viewport of dimensions) {
           .filter((href) => !document.querySelector(href)),
         localBusinessCount: document.querySelectorAll('script[type="application/ld+json"]').length,
         sampleVisible: [...document.querySelectorAll('*')].some((node) => node.children.length === 0 && node.textContent?.trim() === '営業提案用サンプル'),
+        galleryItemRects: galleryItems.map((item) => ({ label: item.textContent?.trim(), ...rect(item) })),
+        galleryLabelsInside: galleryItems.every((item) => {
+          const label = item.querySelector('figcaption');
+          if (!label) return false;
+          const itemRect = item.getBoundingClientRect();
+          const labelRect = label.getBoundingClientRect();
+          return labelRect.left >= itemRect.left && labelRect.right <= itemRect.right && labelRect.top >= itemRect.top && labelRect.bottom <= itemRect.bottom;
+        }),
+        wrappedButtonLabels: buttons
+          .map((button) => ({ text: button.textContent?.trim(), spanHeight: button.querySelector('span')?.getBoundingClientRect().height ?? 0, lineHeight: parseFloat(getComputedStyle(button).lineHeight) }))
+          .filter((item) => item.spanHeight > item.lineHeight * 1.25),
       };
     })()`,
   });
+
+  const heroScreenshot = await client.send("Page.captureScreenshot", {
+    format: "png",
+    fromSurface: true,
+    clip: { x: 0, y: 0, width: viewport.width, height: viewport.height, scale: 1 },
+  });
+  const heroScreenshotPath = `${outputDir}/${viewport.name}-hero.png`;
+  await writeFile(heroScreenshotPath, Buffer.from(heroScreenshot.data, "base64"));
+
+  const galleryBox = await client.send("Runtime.evaluate", {
+    returnByValue: true,
+    expression: `(() => {
+      const section = document.querySelector('#gallery');
+      if (!section) return null;
+      const box = section.getBoundingClientRect();
+      return { x: 0, y: box.top + scrollY, width: innerWidth, height: box.height };
+    })()`,
+  });
+  const galleryClip = galleryBox.result.value;
+  const galleryScreenshot = await client.send("Page.captureScreenshot", {
+    format: "png",
+    captureBeyondViewport: true,
+    fromSurface: true,
+    clip: { ...galleryClip, scale: 1 },
+  });
+  const galleryScreenshotPath = `${outputDir}/${viewport.name}-gallery.png`;
+  await writeFile(galleryScreenshotPath, Buffer.from(galleryScreenshot.data, "base64"));
 
   const layout = await client.send("Page.getLayoutMetrics");
   const { contentSize } = layout;
@@ -274,6 +337,8 @@ for (const viewport of dimensions) {
     ...footerState.result.value,
     menuKeyboardState,
     screenshotPath,
+    heroScreenshotPath,
+    galleryScreenshotPath,
   });
 }
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ctaLabels, site } from "@/data/site";
 import { CtaLink } from "./CtaLink";
-import { ArrowIcon, InstagramIcon } from "./Icons";
+import { InstagramIcon } from "./Icons";
 
 export function DrinkFoodSection() {
   return (
@@ -29,7 +29,6 @@ export function DrinkFoodSection() {
                 <span className="menu-card__number">0{index + 1}</span>
                 <h3>{item.category}</h3>
                 <p>{item.item}</p>
-                <ArrowIcon />
               </div>
             </article>
           ))}
