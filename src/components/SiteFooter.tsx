@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/data/site";
 import { InstagramIcon } from "./Icons";
 
@@ -5,8 +6,17 @@ export function SiteFooter() {
   return (
     <footer className="site-footer" id="site-footer">
       <div className="shell site-footer__grid">
-        <div>
-          <p className="site-footer__name">{site.name}</p>
+        <div className="site-footer__brand">
+          <div className="site-footer__logo-frame">
+            <Image
+              className="site-footer__logo"
+              src="/branding/jimny-megane-coffee-footer-logo.png"
+              alt={site.name}
+              width={2172}
+              height={724}
+              sizes="(max-width: 767px) 290px, 18vw"
+            />
+          </div>
           <p>{site.businessType}</p>
         </div>
         <address>{site.address}</address>

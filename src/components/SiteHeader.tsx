@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 import { CloseIcon, MapPinIcon, MenuIcon } from "./Icons";
@@ -27,8 +28,19 @@ export function SiteHeader() {
   return (
     <header className={`site-header${isScrolled || isOpen ? " is-active" : ""}`}>
       <div className="site-header__inner">
-        <a className="text-logo" href="#top" aria-label="ページ上部へ">
-          {site.name}
+        <a
+          className="site-header__logo"
+          href="#top"
+          aria-label={`${site.name}｜ページ上部へ`}
+        >
+          <Image
+            src="/branding/jimny-megane-coffee-header-logo.png"
+            alt={site.name}
+            width={2172}
+            height={724}
+            priority
+            sizes="(max-width: 767px) 45vw, 204px"
+          />
         </a>
 
         <nav className="desktop-nav" aria-label="メインナビゲーション">

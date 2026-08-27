@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { ctaLabels, site } from "@/data/site";
-import { CtaLink } from "./CtaLink";
-import { InstagramIcon } from "./Icons";
+import { site } from "@/data/site";
 
 export function DrinkFoodSection() {
   return (
@@ -34,15 +32,6 @@ export function DrinkFoodSection() {
           ))}
         </div>
 
-        <div className="section-action">
-          <CtaLink
-            href={site.urls.instagram}
-            icon={<InstagramIcon />}
-            variant="secondary"
-          >
-            {ctaLabels.instagram}
-          </CtaLink>
-        </div>
       </div>
     </section>
   );

@@ -6,8 +6,12 @@ import { InstagramIcon, MapPinIcon } from "./Icons";
 export function HeroSection() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-heading">
+      <span className="hero__organic-curve" aria-hidden="true" />
+      <span className="hero__bird-accent" aria-hidden="true" />
+
       <div className="hero__content">
         <div className="hero__copy">
+          <p className="hero__label">{site.hero.label}</p>
           <p className="eyebrow">{site.hero.eyebrow}</p>
           <h1 id="hero-heading" aria-label={site.hero.heading}>
             <span className="hero-heading__phrase hero-heading__phrase--place">
@@ -50,6 +54,16 @@ export function HeroSection() {
       <div className="hero__meta">
         <p>{site.address}</p>
         <p>{site.latestInfoNote}</p>
+      </div>
+
+      <div className="hero__illustration" aria-hidden="true">
+        <Image
+          src={site.hero.illustration}
+          alt=""
+          width={1672}
+          height={941}
+          sizes="(min-width: 1024px) 270px, 1px"
+        />
       </div>
     </section>
   );

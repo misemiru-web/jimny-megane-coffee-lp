@@ -10,6 +10,16 @@ export const metadata: Metadata = {
     follow: false,
     googleBot: { index: false, follow: false },
   },
+  icons: {
+    icon: [
+      {
+        url: "/branding/jimny-megane-coffee-icon-symbol.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/branding/jimny-megane-coffee-icon-symbol.png",
+    apple: "/branding/jimny-megane-coffee-icon-symbol.png",
+  },
 };
 
 export const viewport: Viewport = {

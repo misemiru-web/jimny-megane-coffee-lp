@@ -19,6 +19,7 @@ export const site = {
     { label: "Access", href: "#access" },
   ],
   hero: {
+    label: "南部鉄器で淹れる一杯を",
     eyebrow: "MOCHIMUNE / SHIZUOKA ・ COFFEE STAND & BAR",
     heading: "用宗で、コーヒーと、よりみちを。",
     headingParts: {
@@ -27,8 +28,9 @@ export const site = {
       detour: "よりみちを。",
     },
     body: "南部鉄器で淹れるドリップ珈琲。食事やお酒も楽しめる、用宗の小さな coffee stand & bar。",
-    image: "/placeholders/hero-drip.svg",
+    image: "/images/hero/hero-drip-new.png",
     imageAlt: "南部鉄器で淹れるドリップ珈琲の写真差し替え予定領域",
+    illustration: "/images/hero/jimny-illustration-full.png",
   },
   about: {
     heading: "用宗にある、小さな coffee stand & bar。",
