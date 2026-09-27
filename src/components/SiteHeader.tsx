@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
-import { assetPath } from "@/lib/asset-path";
-import { CloseIcon, MapPinIcon, MenuIcon } from "./Icons";
+import { CloseIcon, MenuIcon } from "./Icons";
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +32,8 @@ export function SiteHeader() {
           href="#top"
           aria-label={`${site.name}｜ページ上部へ`}
         >
-          <Image
-            src={assetPath("/branding/jimny-megane-coffee-header-logo.png")}
-            alt={site.name}
-            width={2172}
-            height={724}
-            priority
-            sizes="(max-width: 767px) 45vw, 204px"
-          />
+          <span className="site-header__wordmark">{site.name}</span>
+          <span className="site-header__descriptor">{site.businessType}</span>
         </a>
 
         <nav className="desktop-nav" aria-label="メインナビゲーション">
@@ -52,11 +44,9 @@ export function SiteHeader() {
           ))}
           <a
             className="header-map-link"
-            href={site.urls.googleMaps}
-            target="_blank"
-            rel="noreferrer"
+            href={site.links.menu}
           >
-            <MapPinIcon /> MAP
+            MENU
           </a>
         </nav>
 
@@ -85,12 +75,10 @@ export function SiteHeader() {
         ))}
         <a
           className="mobile-nav__map"
-          href={site.urls.googleMaps}
-          target="_blank"
-          rel="noreferrer"
+          href={site.links.menu}
           onClick={() => setIsOpen(false)}
         >
-          <MapPinIcon /> Googleマップを開く
+          メニューを見る
         </a>
       </nav>
     </header>

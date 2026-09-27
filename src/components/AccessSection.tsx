@@ -1,6 +1,5 @@
 import { ctaLabels, site } from "@/data/site";
 import { CtaLink } from "./CtaLink";
-import { InstagramIcon, MapPinIcon } from "./Icons";
 
 export function AccessSection() {
   return (
@@ -9,32 +8,22 @@ export function AccessSection() {
         <div className="access__heading">
           <p className="section-kicker">COME BY AND SAY HELLO</p>
           <h2 id="access-heading">ACCESS</h2>
-          <div className="access__map">
-            <iframe
-              src={site.urls.googleMapsEmbed}
-              title="Jimny megane coffee周辺のGoogleマップ"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
+          <p className="access__large-copy">{site.sampleDescription}</p>
         </div>
 
         <div className="access__details">
           <p className="access__name">{site.name}</p>
           <p>{site.businessType}</p>
-          <address>{site.address}</address>
-          <p className="access__note">{site.latestInfoNote}</p>
+          <p className="access__note">{site.sampleNote}</p>
           <div className="button-group">
-            <CtaLink href={site.urls.googleMaps} icon={<MapPinIcon />}>
-              {ctaLabels.map}
+            <CtaLink href={site.links.menu}>
+              {ctaLabels.menu}
             </CtaLink>
             <CtaLink
-              href={site.urls.instagram}
-              icon={<InstagramIcon />}
+              href={site.links.gallery}
               variant="secondary"
             >
-              {ctaLabels.instagramBusiness}
+              {ctaLabels.gallery}
             </CtaLink>
           </div>
         </div>

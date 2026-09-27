@@ -1,6 +1,11 @@
-# Jimny megane coffee LP
+# SAMPLE COFFEE STAND LP
 
-Jimny megane coffee の営業提案用1ページLPを実装するリポジトリです。
+ミセミルWeb公式サイトに掲載する、架空ブランドの制作デザインサンプルLPです。
+
+> [!IMPORTANT]
+> 公開ページは匿名化済みの `SAMPLE COFFEE STAND` を現行仕様とします。
+> `docs/` および以下に残る実店舗固有の記載は過去資料であり、実店舗名、所在地、SNS、Google Maps、営業情報、イベント、ブランド素材を公開ページへ戻す根拠にはしません。
+> 公開コンテンツは `AGENTS.md` の最優先匿名化方針と `src/data/site.ts` を基準にしてください。
 
 ## Current status
 
@@ -47,7 +52,6 @@ jimny-megane-coffee-lp/
 ├─ public/
 │  └─ placeholders/
 │     ├─ hero-drip.svg
-│     ├─ exterior.svg
 │     ├─ interior.svg
 │     ├─ coffee.svg
 │     └─ food.svg
@@ -95,7 +99,7 @@ Design Referenceは見た目の参考であり、
 開発用として利用できるのは以下です。
 
 - `/placeholders/hero-drip.svg`
-- `/placeholders/exterior.svg`
+- `/images/hero/hero-drip-new.png`
 - `/placeholders/interior.svg`
 - `/placeholders/coffee.svg`
 - `/placeholders/food.svg`
