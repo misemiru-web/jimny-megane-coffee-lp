@@ -2,8 +2,8 @@ import { spawn } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 
 const chromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-const outputDir = "/private/tmp/jimny-megane-coffee-qa";
-const targetUrl = "http://127.0.0.1:3000/";
+const outputDir = "/private/tmp/sample-coffee-stand-qa";
+const targetUrl = "http://localhost:3000/";
 
 await mkdir(outputDir, { recursive: true });
 
@@ -230,6 +230,15 @@ for (const viewport of dimensions) {
         viewportWidth: document.documentElement.clientWidth,
         documentWidth: document.documentElement.scrollWidth,
         bodyWidth: document.body.scrollWidth,
+        overflowingElements: [...document.querySelectorAll('body *')]
+          .map((element) => ({
+            tag: element.tagName,
+            className: typeof element.className === 'string' ? element.className : '',
+            text: element.children.length === 0 ? element.textContent?.trim().slice(0, 80) : '',
+            left: element.getBoundingClientRect().left,
+            right: element.getBoundingClientRect().right,
+          }))
+          .filter((element) => element.left < -0.5 || element.right > document.documentElement.clientWidth + 0.5),
         documentHeight: document.documentElement.scrollHeight,
         heroPrimaryBottom: primary?.getBoundingClientRect().bottom ?? null,
         heroPrimaryWithin1_3Viewport: primary ? primary.getBoundingClientRect().bottom <= innerHeight * 1.3 : false,
@@ -245,14 +254,18 @@ for (const viewport of dimensions) {
         stickyHeight: sticky ? sticky.getBoundingClientRect().height : null,
         footerExists: Boolean(footer),
         sectionIds: [...document.querySelectorAll('main section[id]')].map((item) => item.id),
-        mapLinkCount: links.filter((link) => link.href.startsWith('https://www.google.com/maps/place/')).length,
-        instagramLinkCount: links.filter((link) => link.href === 'https://www.instagram.com/jimny_meganecoffee/').length,
+        externalLinkCount: links.filter((link) => /^https?:/.test(link.getAttribute('href') ?? '')).length,
+        iframeCount: document.querySelectorAll('iframe').length,
         missingAnchorTargets: links
           .filter((link) => link.getAttribute('href')?.startsWith('#'))
           .map((link) => link.getAttribute('href'))
           .filter((href) => !document.querySelector(href)),
         localBusinessCount: document.querySelectorAll('script[type="application/ld+json"]').length,
-        sampleVisible: [...document.querySelectorAll('*')].some((node) => node.children.length === 0 && node.textContent?.trim() === '営業提案用サンプル'),
+        sampleVisible: [...document.querySelectorAll('*')].some((node) => node.children.length === 0 && node.textContent?.trim() === 'ミセミルWeb 制作デザインサンプル'),
+        brokenImages: [...document.images]
+          .filter((image) => image.getClientRects().length > 0)
+          .filter((image) => !image.complete || image.naturalWidth === 0)
+          .map((image) => image.currentSrc || image.src),
         galleryItemRects: galleryItems.map((item) => ({ label: item.textContent?.trim(), ...rect(item) })),
         galleryLabelsInside: galleryItems.every((item) => {
           const label = item.querySelector('figcaption');

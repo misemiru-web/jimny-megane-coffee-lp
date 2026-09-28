@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ctaLabels, site } from "@/data/site";
 import { CtaLink } from "./CtaLink";
-import { InstagramIcon, MapPinIcon } from "./Icons";
 
 export function HeroSection() {
   return (
@@ -26,15 +25,14 @@ export function HeroSection() {
           </h1>
           <p className="hero__body">{site.hero.body}</p>
           <div className="button-group hero__buttons">
-            <CtaLink href={site.urls.googleMaps} icon={<MapPinIcon />}>
-              {ctaLabels.map}
+            <CtaLink href={site.links.menu}>
+              {ctaLabels.menu}
             </CtaLink>
             <CtaLink
-              href={site.urls.instagram}
-              icon={<InstagramIcon />}
+              href={site.links.gallery}
               variant="secondary"
             >
-              {ctaLabels.instagram}
+              {ctaLabels.gallery}
             </CtaLink>
           </div>
         </div>
@@ -52,15 +50,15 @@ export function HeroSection() {
       </div>
 
       <div className="hero__meta">
-        <p>{site.address}</p>
-        <p>{site.latestInfoNote}</p>
+        <p>DESIGN SAMPLE</p>
+        <p>{site.sampleNote}</p>
       </div>
 
       <div className="hero__illustration" aria-hidden="true">
         <Image
           src={site.hero.illustration}
           alt=""
-          width={1672}
+          width={1671}
           height={941}
           sizes="(min-width: 1024px) 270px, 1px"
         />

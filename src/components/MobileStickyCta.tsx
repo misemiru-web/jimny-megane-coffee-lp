@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { ctaLabels, site } from "@/data/site";
-import { MapPinIcon } from "./Icons";
 
 export function MobileStickyCta() {
   const [footerVisible, setFooterVisible] = useState(false);
@@ -20,9 +19,8 @@ export function MobileStickyCta() {
 
   return (
     <div className={`mobile-sticky-cta${footerVisible ? " is-hidden" : ""}`}>
-      <a href={site.urls.googleMaps} target="_blank" rel="noreferrer">
-        <MapPinIcon />
-        {ctaLabels.mobileMap}
+      <a href={site.links.menu}>
+        {ctaLabels.mobileMenu}
       </a>
     </div>
   );

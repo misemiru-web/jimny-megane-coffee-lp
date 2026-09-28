@@ -16,12 +16,7 @@ export function CtaLink({
   className = "",
 }: CtaLinkProps) {
   return (
-    <a
-      className={`button button--${variant} ${className}`.trim()}
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <a className={`button button--${variant} ${className}`.trim()} href={href}>
       {icon}
       <span>{children}</span>
     </a>

@@ -22,7 +22,7 @@ export function GallerySection() {
             </figure>
           ))}
         </div>
-        <p className="gallery__note">実写真到着後、許可確認済み素材へ差し替えます。</p>
+        <p className="gallery__note">掲載画像はデザイン確認用のプレースホルダーです。</p>
       </div>
     </section>
   );

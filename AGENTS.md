@@ -2,7 +2,23 @@
 
 ## Project
 
-Jimny megane coffee の営業提案用1ページLPを実装するリポジトリです。
+ミセミルWeb公式サイトに掲載する、架空ブランドの制作デザインサンプルLPです。
+
+## Current anonymization policy (highest priority)
+
+このセクションは、以下に残る実店舗向けの旧仕様および `docs/` の記載より優先します。
+
+- 公開ページの名称は `SAMPLE COFFEE STAND` とする
+- 実店舗名、住所、地域名、SNS、Google Maps、営業情報、イベント名を公開ページへ戻さない
+- 実店舗ロゴ、店舗名入り画像、車両を含むブランド素材を公開しない
+- CTAはページ内アンカーのみとし、実店舗への外部リンクを追加しない
+- Footer付近に「ミセミルWeb 制作デザインサンプル」と明示する
+- `noindex, nofollow` を維持する
+- `docs/` の実店舗固有情報は過去資料として扱い、公開コンテンツの根拠にしない
+
+公開コンテンツの現行データは `src/data/site.ts` を基準とします。
+
+以下の実店舗向け記述は、レイアウトや過去の設計意図を参照するための履歴です。
 
 現在は「実写真到着前の仮実装フェーズ」です。
 レイアウト、レスポンシブ、CTA、SEO、アクセシビリティ、差し替え可能なデータ構造までを完成させ、
@@ -33,7 +49,7 @@ Jimny megane coffee の営業提案用1ページLPを実装するリポジトリ
 仮実装では、既存の以下だけを開発用プレースホルダーとして使用できます。
 
 - `/placeholders/hero-drip.svg`
-- `/placeholders/exterior.svg`
+- `/images/hero/hero-drip-new.png`
 - `/placeholders/interior.svg`
 - `/placeholders/coffee.svg`
 - `/placeholders/food.svg`

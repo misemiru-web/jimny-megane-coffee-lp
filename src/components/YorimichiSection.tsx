@@ -1,6 +1,5 @@
 import { ctaLabels, site } from "@/data/site";
 import { CtaLink } from "./CtaLink";
-import { InstagramIcon } from "./Icons";
 
 export function YorimichiSection() {
   return (
@@ -45,11 +44,10 @@ export function YorimichiSection() {
           ))}
           <p className="yorimichi__note">{site.yorimichi.note}</p>
           <CtaLink
-            href={site.urls.instagram}
-            icon={<InstagramIcon />}
+            href={site.links.gallery}
             variant="secondary"
           >
-            {ctaLabels.instagramPosts}
+            {ctaLabels.gallery}
           </CtaLink>
         </div>
       </div>
